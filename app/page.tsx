@@ -11,6 +11,8 @@ import ScrollText from "./components/ScrollText";
 import TypewriterSearch from "./components/TypewriterSearch";
 import AnimeWall from "./components/AnimeWall";
 import Community from "./components/Community";
+import homeGif from "./assets/home.gif";
+import searchGif from "./assets/search.gif";
 
 export default function AniFluxHero() {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -81,14 +83,26 @@ export default function AniFluxHero() {
             style={{ y: yApp }}
             className="w-[90%] md:w-[900px] h-[300px] md:h-[500px] bg-gray-800 rounded-lg shadow-2xl border border-gray-700 flex items-center justify-center relative overflow-hidden"
           >
-            {/* If you have the image, uncomment the line below */}
-            {/* <Image src="/dashboard.png" alt="App Dashboard" fill className="object-cover" /> */}
-            <span className="text-gray-500 z-10">
-              AniFlux Dashboard Preview
-            </span>
+            {/* Dashboard Preview Images */}
+            <div className="flex gap-4 md:gap-8 items-center justify-center w-full h-full p-4">
+              <div className="relative h-full aspect-[9/19] rounded-2xl overflow-hidden border-4 border-gray-800 shadow-2xl">
+                <img
+                  src={homeGif.src}
+                  alt="Home Preview"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="relative h-full aspect-[9/19] rounded-2xl overflow-hidden border-4 border-gray-800 shadow-2xl">
+                <img
+                  src={searchGif.src}
+                  alt="Search Preview"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
 
             {/* Glossy overlay effect */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none rounded-lg"></div>
           </motion.div>
         </div>
       </div>

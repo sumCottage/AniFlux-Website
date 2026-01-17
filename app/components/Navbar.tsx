@@ -51,7 +51,7 @@ export default function Navbar() {
           <a href="#" className="hover:text-white transition-colors">
             Features
           </a>
-          <a href="#" className="hover:text-white transition-colors">
+          <a href="#community" className="hover:text-white transition-colors">
             Community
           </a>
           <a

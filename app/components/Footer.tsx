@@ -47,13 +47,10 @@ export default function Footer() {
             <p>© 2026 AniFlux. All rights reserved.</p>
           </div>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">
-              Twitter
+            <a href="/privacy-policy" className="hover:text-white">
+              Privacy Policy
             </a>
-            <a href="#" className="hover:text-white">
-              Discord
-            </a>
-            <a href="https://github.com/som120/AniFlux" target="_blank" className="hover:text-white">
+            <a href="https://github.com/som120/AniFlux" target="_blank" rel="noopener noreferrer" className="hover:text-white">
               Github
             </a>
           </div>
