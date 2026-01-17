@@ -66,7 +66,7 @@ export default function AnimeWall() {
           {duplicatedCovers.map((src, index) => (
             <div
               key={index}
-              className="relative w-[200px] h-[300px] flex-shrink-0 rounded-xl overflow-hidden border border-neutral-800 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110 hover:z-10 cursor-pointer group"
+              className="relative w-[200px] h-[300px] flex-shrink-0 rounded-xl overflow-hidden border border-neutral-800 md:grayscale md:hover:grayscale-0 transition-all duration-300 hover:scale-110 hover:z-10 cursor-pointer group"
             >
               <img
                 src={src.src}

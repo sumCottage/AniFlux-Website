@@ -33,6 +33,7 @@ export default function Community() {
 
     return (
         <div
+            id="community"
             ref={containerRef}
             onMouseMove={handleMouseMove}
             className="relative w-full h-[600px] md:h-[800px] overflow-hidden bg-black flex items-center justify-center group"
