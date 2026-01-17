@@ -11,53 +11,75 @@ export default function PrivacyPolicy() {
 
                 <div className="space-y-8 text-neutral-300 leading-relaxed">
                     <p className="text-lg">
-                        Last updated: {new Date().toLocaleDateString()}
+                        Last updated: January 2026
                     </p>
 
                     <section>
-                        <h2 className="text-2xl font-semibold text-white mb-4">1. Introduction</h2>
-                        <p>
-                            Welcome to AniFlux. We respect your privacy and are committed to protecting your personal data.
-                            This privacy policy will inform you as to how we look after your personal data when you visit our website
-                            or use our application and tell you about your privacy rights.
+                        <h2 className="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                            <span className="p-2 bg-blue-600/10 rounded-full text-blue-400">
+                                {/* Material Icon equivalent: data_usage (database) */}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" /><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" /></svg>
+                            </span>
+                            Data Collection
+                        </h2>
+                        <p className="pl-14">
+                            AniFlux collects only the minimum data required for the app to function. This includes your saved anime lists, watch progress, and app preferences. Account-related information is collected only for authentication purposes and is not used for advertising or marketing.
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-semibold text-white mb-4">2. Data We Collect</h2>
-                        <p>
-                            We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows:
-                        </p>
-                        <ul className="list-disc pl-5 mt-2 space-y-2">
-                            <li><strong>Identity Data:</strong> includes username or similar identifier.</li>
-                            <li><strong>Usage Data:</strong> includes information about how you use our website, products and services (e.g., anime tracking history).</li>
-                            <li><strong>Device Data:</strong> includes internet protocol (IP) address, browser type and version, time zone setting and location.</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h2 className="text-2xl font-semibold text-white mb-4">3. How We Use Your Data</h2>
-                        <p>
-                            We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:
-                        </p>
-                        <ul className="list-disc pl-5 mt-2 space-y-2">
-                            <li>To provide the AniFlux service to you (tracking anime).</li>
-                            <li>To improve our website and services.</li>
-                            <li>To recommend content based on your interests.</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h2 className="text-2xl font-semibold text-white mb-4">4. Data Security</h2>
-                        <p>
-                            We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed.
+                        <h2 className="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                            <span className="p-2 bg-blue-600/10 rounded-full text-blue-400">
+                                {/* Material Icon equivalent: cloud_queue */}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17.5 19c0-3.037-2.463-5.5-5.5-5.5S6.5 15.963 6.5 19" /><path d="M5 20h14a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-1" /><path d="M10 9a5 5 0 0 1 5 5v2" /></svg>
+                            </span>
+                            Data Storage & Security
+                        </h2>
+                        <p className="pl-14">
+                            Your data is securely stored using Firebase services, including Firestore and Firebase Authentication. Backend operations are handled using Appwrite Cloud Functions. Reasonable security measures are in place to protect your data from unauthorized access.
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-semibold text-white mb-4">5. Contact Us</h2>
-                        <p>
-                            If you have any questions about this privacy policy or our privacy practices, please contact us at support@aniflux.com.
+                        <h2 className="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                            <span className="p-2 bg-blue-600/10 rounded-full text-blue-400">
+                                {/* Material Icon equivalent: link */}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
+                            </span>
+                            Third-Party Services
+                        </h2>
+                        <p className="pl-14">
+                            AniFlux uses third-party services to provide core functionality. Anime information is retrieved using the AniList API. Firebase is used for authentication and data storage, and Appwrite is used for backend processing. These services operate under their own privacy policies.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                            <span className="p-2 bg-blue-600/10 rounded-full text-blue-400">
+                                {/* Material Icon equivalent: shield */}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                            </span>
+                            Your Rights
+                        </h2>
+                        <p className="pl-14">
+                            You have the right to access and delete your data at any time. You may request account and data deletion by using the in-app options or by contacting the developer. Upon request, your data will be permanently removed within a reasonable timeframe.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                            <span className="p-2 bg-blue-600/10 rounded-full text-blue-400">
+                                {/* Material Icon equivalent: email */}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                            </span>
+                            Contact
+                        </h2>
+                        <p className="pl-14">
+                            If you have any questions or concerns regarding privacy or data usage, you can contact us at{" "}
+                            <a href="mailto:aniflux.dev@gmail.com" className="text-blue-400 hover:underline">
+                                aniflux.dev@gmail.com
+                            </a>
+                            . You may also report issues or request support via the AniFlux GitHub repository.
                         </p>
                     </section>
                 </div>
