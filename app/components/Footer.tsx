@@ -50,6 +50,9 @@ export default function Footer() {
             <a href="/privacy-policy" className="hover:text-white">
               Privacy Policy
             </a>
+            <a href="/terms-and-conditions" className="hover:text-white">
+              Terms & Conditions
+            </a>
             <a href="https://github.com/som120/AniFlux" target="_blank" rel="noopener noreferrer" className="hover:text-white">
               Github
             </a>
