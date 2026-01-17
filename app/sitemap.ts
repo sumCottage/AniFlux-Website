@@ -1,12 +1,10 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://ani-flux.vercel.app";
-
   return [
     {
-      url: baseUrl,
-      lastModified: new Date(),
+      url: "https://ani-flux.vercel.app/",
+      lastModified: new Date().toISOString(),
       changeFrequency: "weekly",
       priority: 1,
     },
