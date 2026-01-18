@@ -66,9 +66,9 @@ export default function Navbar() {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-center pt-6"
     >
-      <div className="w-[90%] md:w-[600px] h-14 bg-black/60 backdrop-blur-md border border-white/10 rounded-full px-6 flex items-center justify-between shadow-lg shadow-blue-500/5">
+      <div className="w-[92%] md:w-[720px] h-14 bg-black/60 backdrop-blur-md border border-white/10 rounded-full px-4 md:px-8 flex items-center justify-between shadow-lg shadow-blue-500/5">
         {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer">
+        <div className="flex items-center gap-2.5 cursor-pointer">
           <div className="relative w-8 h-8 rounded-full overflow-hidden">
             <Image
               src={logo}
@@ -80,11 +80,9 @@ export default function Navbar() {
           <span className="font-bold text-white tracking-tight">AniFlux</span>
         </div>
 
-
-
         {/* Desktop Links (Hidden on small screens) */}
-        <div className="hidden md:flex items-center gap-6 text-sm text-neutral-400">
-          <a href="#" className="hover:text-white transition-colors">
+        <div className="hidden md:flex items-center gap-5 text-sm text-neutral-400">
+          <a href="#features" className="hover:text-white transition-colors">
             Features
           </a>
           <a href="#community" className="hover:text-white transition-colors">
@@ -93,12 +91,12 @@ export default function Navbar() {
           <a
             href="https://github.com/som120/AniFlux"
             target="_blank"
-            className="flex items-center gap-2 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 hover:text-white transition-colors"
           >
-            <Github size={16} />
+            <Github size={15} />
             <span>Star on GitHub</span>
             {stars !== null && (
-              <span className="flex items-center bg-white/10 px-2 py-0.5 rounded-full text-xs font-semibold">
+              <span className="flex items-center gap-0.5 bg-white/10 px-2 py-0.5 rounded-full text-xs font-semibold ml-1">
                 {stars} <span className="text-yellow-400">★</span>
               </span>
             )}
@@ -106,9 +104,12 @@ export default function Navbar() {
         </div>
 
         {/* CTA Button */}
-        <button className="bg-white text-black text-xs font-bold px-4 py-2 rounded-full hover:bg-gray-200 transition-colors">
+        <a 
+          href="#download" 
+          className="bg-white text-black text-xs font-bold px-4 py-2 rounded-full hover:bg-gray-200 transition-colors"
+        >
           Get App
-        </button>
+        </a>
       </div>
     </motion.nav>
   );

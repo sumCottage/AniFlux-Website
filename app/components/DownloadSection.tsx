@@ -8,7 +8,7 @@ import githubLogo from "../assets/GitHub_Invertocat_Black.png";
 
 export default function DownloadSection() {
     return (
-        <div className="bg-black py-32 px-4 border-t border-neutral-900 relative overflow-hidden flex flex-col items-center justify-center text-center">
+        <div id="download" className="bg-black py-32 px-4 border-t border-neutral-900 relative overflow-hidden flex flex-col items-center justify-center text-center">
             {/* Background decoration */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
 

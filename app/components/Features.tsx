@@ -5,7 +5,7 @@ import BentoCard from "./BentoCard";
 
 export default function Features() {
   return (
-    <section className="bg-black py-20 px-4 md:px-10">
+    <section id="features" className="bg-black py-20 px-4 md:px-10">
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-10 text-center">
@@ -23,11 +23,10 @@ export default function Features() {
           <BentoCard className="md:col-span-2 bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex flex-col justify-between">
             <div>
               <h3 className="text-2xl font-semibold text-white">
-                Smart Synchronization
+                Cloud Synchronization
               </h3>
               <p className="text-neutral-400 mt-2">
-                Sync your watchlist automatically with MyAnimeList and Anilist
-                in real-time.
+                Never lose your progress. Your watchlist syncs instantly across devices using Firebase & Appwrite.
               </p>
             </div>
 
@@ -40,16 +39,16 @@ export default function Features() {
 
           {/* Card 2 — Tall (FIXED MOBILE POSITION) */}
           <BentoCard className="md:row-span-2 bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex flex-col">
-            <h3 className="text-2xl font-semibold text-white">Mobile Native</h3>
+            <h3 className="text-2xl font-semibold text-white">Fluid Experience</h3>
             <p className="text-neutral-400 mt-2">
-              Offline downloads for watching on the go.
+              Built with Flutter 3. Enjoy buttery smooth animations and native performance on Android.
             </p>
 
             {/* Phone pinned to bottom */}
             <div className="mt-auto flex justify-center pt-10">
               <div className="w-40 h-80 bg-neutral-800 border-[8px] border-neutral-700 rounded-[30px] overflow-hidden">
                 <div className="w-full h-full bg-blue-900/20 grid place-items-center text-xs text-blue-300 text-center">
-                  Ep. 1044 <br /> Downloading...
+                  Ep. 1044 <br /> List Scroll
                 </div>
               </div>
             </div>
@@ -58,16 +57,16 @@ export default function Features() {
           {/* Card 3 */}
           <BentoCard className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex flex-col justify-center">
             <h3 className="text-xl font-semibold text-white">
-              Ad-Block Built-in
+              Powered by AniList
             </h3>
-            <p className="text-neutral-400 text-sm mt-2">Zero interruptions.</p>
+            <p className="text-neutral-400 text-sm mt-2">Real-time metadata. Get instant access to ratings, genres, and synopses via the GraphQL API.</p>
           </BentoCard>
 
           {/* Card 4 */}
           <BentoCard className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex flex-col justify-center">
-            <h3 className="text-xl font-semibold text-white">4K Streaming</h3>
+            <h3 className="text-xl font-semibold text-white">Seasonal Filters</h3>
             <p className="text-neutral-400 text-sm mt-2">
-              Crystal clear quality.
+              Find your next obsession. Filter by Airing Now, Upcoming, Top 100, or Popular Movies.
             </p>
           </BentoCard>
         </motion.div>

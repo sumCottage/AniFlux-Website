@@ -51,10 +51,18 @@ export default function AniFluxHero() {
         <div className="relative z-20 flex flex-col items-center justify-center min-h-[80vh] gap-10 px-4">
           {/* Header Text */}
           <div className="text-center">
-            <h1 className="text-7xl md:text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
+            <h1 
+              className="text-7xl md:text-9xl font-bold"
+              style={{ 
+                color: "#F8F9FA",
+                textShadow: "0px 0px 20px rgba(19, 137, 255, 1)"
+              }}
+            >
               AniFlux
             </h1>
-            <p className="mt-6 text-xl text-gray-400">Track. Watch. Save.</p>
+            <p className="mt-6 text-xl text-white">
+              Track<span style={{ color: "#2979FF" }}>.</span> Sync<span style={{ color: "#2979FF" }}>.</span> Discover<span style={{ color: "#2979FF" }}>.</span>
+            </p>
           </div>
 
 
