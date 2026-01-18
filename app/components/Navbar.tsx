@@ -9,6 +9,38 @@ import { Github } from "lucide-react";
 export default function Navbar() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
+  const [stars, setStars] = useState<number | null>(null);
+
+  useEffect(() => {
+    // 1. Try to load from localStorage first for instant display
+    const cached = localStorage.getItem("aniflux-stars");
+    if (cached) {
+      setStars(parseInt(cached, 10));
+    }
+
+    // 2. Function to fetch fresh data
+    const fetchStars = () => {
+      fetch("https://api.github.com/repos/som120/AniFlux")
+        .then((res) => {
+          if (!res.ok) throw new Error("Failed to fetch");
+          return res.json();
+        })
+        .then((data) => {
+          const count = data.stargazers_count;
+          setStars(count);
+          localStorage.setItem("aniflux-stars", count.toString());
+        })
+        .catch((err) => console.error("Error fetching stars:", err));
+    };
+
+    // 3. Fetch immediately
+    fetchStars();
+
+    // 4. Poll every 30 seconds to keep it "live"
+    const interval = setInterval(fetchStars, 30000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Auto-hide the navbar when scrolling down, show when scrolling up
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -61,6 +93,11 @@ export default function Navbar() {
           >
             <Github size={16} />
             <span>Star on GitHub</span>
+            {stars !== null && (
+              <span className="flex items-center bg-white/10 px-2 py-0.5 rounded-full text-xs font-semibold">
+                {stars} ★
+              </span>
+            )}
           </a>
         </div>
 

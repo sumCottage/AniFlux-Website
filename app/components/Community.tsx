@@ -6,7 +6,7 @@ import { Github, MessageCircle } from "lucide-react";
 
 // Mock data (or real data if we had a way to fetch continuously, but hardcoded is safer for this demo)
 // Using the 2 contributors found + duplicates to fill the space for the visual effect
-const CONTRIBUTORS = [
+const INITIAL_CONTRIBUTORS = [
     { login: "som120", avatar_url: "https://avatars.githubusercontent.com/u/104649891?v=4", html_url: "https://github.com/som120" },
     { login: "sumCottage", avatar_url: "https://avatars.githubusercontent.com/u/197411859?v=4", html_url: "https://github.com/sumCottage" },
     // Duplicates to simulate a crowd for the visual effect
@@ -24,6 +24,37 @@ export default function Community() {
     const containerRef = useRef<HTMLDivElement>(null);
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
+    const [contributors, setContributors] = useState(INITIAL_CONTRIBUTORS);
+
+    useEffect(() => {
+        async function fetchContributors() {
+            try {
+                const response = await fetch('https://api.github.com/repos/som120/AniFlux/contributors');
+                if (!response.ok) return;
+
+                const data = await response.json();
+
+                // Ensure we have enough items for the visual effect (at least 10)
+                // If real contributors are few, duplicate them to fill the cloud
+                let paddedContributors = [...data];
+                while (paddedContributors.length < 10 && paddedContributors.length > 0) {
+                    paddedContributors = [...paddedContributors, ...data];
+                }
+
+                // Limit max bubbles to avoid performance issues or overcrowding
+                if (paddedContributors.length > 20) {
+                    paddedContributors = paddedContributors.slice(0, 20);
+                }
+
+                setContributors(paddedContributors);
+            } catch (error) {
+                console.error("Error fetching contributors:", error);
+            }
+        }
+
+        // Fetch real contributors
+        fetchContributors();
+    }, []);
 
     function handleMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
         let { left, top } = currentTarget.getBoundingClientRect();
@@ -60,12 +91,12 @@ export default function Community() {
 
             {/* Floating Avatars */}
             <div className="absolute inset-0 z-10">
-                {CONTRIBUTORS.map((user, i) => (
+                {contributors.map((user, i) => (
                     <AvatarBubble
                         key={i}
                         user={user}
                         index={i}
-                        total={CONTRIBUTORS.length}
+                        total={contributors.length}
                     />
                 ))}
             </div>

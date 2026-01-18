@@ -11,6 +11,7 @@ import ScrollText from "./components/ScrollText";
 import TypewriterSearch from "./components/TypewriterSearch";
 import AnimeWall from "./components/AnimeWall";
 import Community from "./components/Community";
+import DownloadSection from "./components/DownloadSection";
 import homeGif from "./assets/home.gif";
 import searchGif from "./assets/search.gif";
 
@@ -125,7 +126,10 @@ export default function AniFluxHero() {
         {/* 5. Community */}
         <Community />
 
-        {/* 6. Footer */}
+        {/* 6. Download Section */}
+        <DownloadSection />
+
+        {/* 7. Footer */}
         <Footer />
       </div>
     </div>

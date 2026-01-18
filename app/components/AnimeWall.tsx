@@ -42,7 +42,7 @@ export default function AnimeWall() {
 
       <div className="max-w-7xl mx-auto mb-12 px-6">
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-          Stream <span className="text-blue-500">Everything.</span>
+          Track <span className="text-blue-500">Everything.</span>
         </h2>
         <p className="text-neutral-400 max-w-xl">
           From seasonal hits to timeless classics. If it exists, AniFlux tracks
