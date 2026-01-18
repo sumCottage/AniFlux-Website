@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full min-h-[200px] md:h-[350px] bg-blue-600 text-white">
+    <footer className="relative w-full h-[180px] md:h-[300px] bg-blue-600 text-white overflow-hidden">
       {/* Links Section */}
-      <div className="absolute top-4 right-4 md:top-24 md:right-12 flex flex-col items-end gap-1 md:gap-2 text-xs md:text-xl font-medium tracking-wide z-20">
+      <div className="absolute top-4 right-4 md:top-12 md:right-12 flex flex-col items-end gap-1 md:gap-2 text-xs md:text-xl font-medium tracking-wide z-20">
         <a href="https://github.com/som120/AniFlux" target="_blank" rel="noopener noreferrer" className="hover:text-black hover:scale-105 transition-all duration-300">
           Github
         </a>
@@ -25,7 +25,7 @@ export default function Footer() {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-[18vw] md:text-[16vw] font-bold tracking-tighter text-black leading-[0.85] pb-2 md:pb-4"
+          className="text-[18vw] md:text-[16vw] font-bold tracking-tighter text-black leading-[0.75] pb-2 md:pb-4"
         >
           AniFlux
         </motion.h1>
