@@ -45,8 +45,7 @@ export default function AnimeWall() {
           Track <span className="text-blue-500">Everything.</span>
         </h2>
         <p className="text-neutral-400 max-w-xl">
-          From seasonal hits to timeless classics. If it exists, AniFlux tracks
-          it.
+          From seasonal hits to timeless classics. If it exists on AniList, AniFlux tracks it.
         </p>
       </div>
 

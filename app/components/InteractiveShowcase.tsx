@@ -6,9 +6,9 @@ import { motion, AnimatePresence } from "framer-motion";
 const tabs = [
   {
     id: "track",
-    label: "Smart Tracking",
+    label: "Seamless Tracking",
     description:
-      "Never forget which episode you watched. We auto-update your lists.",
+      "One-tap updates. Mark Anime as Completed, Planning, or Watching instantly. ",
     color: "bg-blue-500",
     mockContent: (
       <div className="w-full h-full bg-neutral-900 rounded-xl border border-neutral-800 p-6 flex flex-col gap-4">
@@ -27,7 +27,7 @@ const tabs = [
               key={i}
               className="flex justify-between items-center p-3 bg-neutral-800/50 rounded-lg"
             >
-              <span className="text-neutral-400 text-sm">Episode {10 + i}</span>
+              <span className="text-neutral-400 text-sm">Image: (Show the episode list UI from your app). {10 + i}</span>
               <span className="text-blue-400 text-xs font-mono">WATCHED</span>
             </div>
           ))}
@@ -37,9 +37,9 @@ const tabs = [
   },
   {
     id: "ai",
-    label: "AI Recommendations",
+    label: "Advanced Calendars",
     description:
-      "Finished One Piece? Our AI knows exactly what you should watch next.",
+      "Never miss an episode. See exactly what's airing today, tomorrow, and next season.",
     color: "bg-purple-500",
     mockContent: (
       <div className="w-full h-full bg-neutral-900 rounded-xl border border-neutral-800 p-6 flex items-center justify-center relative overflow-hidden">
@@ -48,7 +48,7 @@ const tabs = [
           <div className="text-6xl mb-4">🤖</div>
           <h4 className="text-white text-lg font-bold">Matching... 98%</h4>
           <p className="text-purple-300 mt-2">
-            Recommended: <br /> "Jujutsu Kaisen"
+            Recommended: <br /> "Image: (Show the Seasonal/Calendar view)."
           </p>
         </div>
       </div>
@@ -56,14 +56,14 @@ const tabs = [
   },
   {
     id: "social",
-    label: "Friends Activity",
-    description: "See what your friends are binging in real-time.",
+    label: "Rich Details",
+    description: "High-res posters, character lists, and studio info at your fingertips.",
     color: "bg-pink-500",
     mockContent: (
       <div className="w-full h-full bg-neutral-900 rounded-xl border border-neutral-800 p-6">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-          <span className="text-neutral-400 text-sm">3 Friends Online</span>
+          <span className="text-neutral-400 text-sm">Image: (Show the Anime Details page).</span>
         </div>
         <div className="space-y-4">
           <div className="flex items-center gap-3">

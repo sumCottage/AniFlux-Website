@@ -83,7 +83,7 @@ export default function AniFluxHero() {
       <div className="relative z-30 bg-black">
         <AnimeWall />
         <div className="bg-black min-h-[50vh] flex items-center justify-center px-4">
-          <ScrollText content="Experience anime like never before. No ads. No buffering. Just pure immersion." />
+          <ScrollText content="Your Anime Journey, Perfected. The ultimate Flutter-based tracker—sync your progress, discover seasonal hits, and manage your collection with a stunning, clutter-free UI." />
         </div>
 
         {/* 2. Features Grid */}

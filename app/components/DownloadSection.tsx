@@ -2,6 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import googlePlayIcon from "../assets/google_play.png";
+import githubLogo from "../assets/GitHub_Invertocat_Black.png";
 
 export default function DownloadSection() {
     return (
@@ -26,8 +29,8 @@ export default function DownloadSection() {
                     viewport={{ once: true }}
                     className="text-neutral-400 text-lg mb-12 max-w-2xl mx-auto"
                 >
-                    Join 10,000+ anime fans tracking their journey with AniFlux. Free
-                    forever for the first 1,000 users.
+                    Join the new wave of anime fans upgrading their tracking experience.
+                    <br />Free, open-source, and privacy-focused.
                 </motion.p>
 
                 <motion.div
@@ -35,14 +38,26 @@ export default function DownloadSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="flex flex-col md:flex-row items-center justify-center gap-4"
+                    className="flex flex-col items-center gap-4"
                 >
-                    <button className="px-8 py-4 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform flex items-center gap-2">
-                        Download for iOS
-                    </button>
-                    <button className="px-8 py-4 bg-neutral-900 text-white border border-neutral-800 font-bold rounded-full hover:bg-neutral-800 hover:scale-105 transition-transform flex items-center gap-2">
-                        Get Android APK
-                    </button>
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+                        <a 
+                            href="#" 
+                            className="px-8 py-4 bg-neutral-900 text-white border border-neutral-800 font-bold rounded-full transition-transform flex items-center gap-3 opacity-50 cursor-not-allowed"
+                        >
+                            <Image src={googlePlayIcon} alt="Google Play" width={20} height={20} />
+                            Google Play
+                        </a>
+                        <a 
+                            href="https://github.com/som120/AniFlux/releases" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-4 bg-neutral-900 text-white border border-neutral-800 font-bold rounded-full hover:bg-neutral-800 hover:scale-105 transition-transform flex items-center gap-3"
+                        >
+                            <Image src={githubLogo} alt="GitHub" width={20} height={20} className="invert" />
+                            Download APK
+                        </a>
+                    </div>
                 </motion.div>
             </div>
         </div>
