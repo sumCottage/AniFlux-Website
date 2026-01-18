@@ -26,7 +26,7 @@ export default function AniFluxHero() {
   const yApp = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
 
   return (
-    <div className="bg-black text-white overflow-x-hidden relative">
+    <div className="bg-black text-white overflow-x-hidden relative [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
       {/* 0. Navbar */}
       <Navbar />
 
@@ -60,7 +60,7 @@ export default function AniFluxHero() {
 
 
           {/* Dashboard Preview */}
-          <div className="relative overflow-hidden h-[600px] md:h-[1200px]">
+          <div className="relative overflow-hidden h-[600px] md:h-[1200px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             <motion.div
               style={{ y: yApp }}
               className="w-full md:w-[1600px] h-full flex items-center justify-center"
